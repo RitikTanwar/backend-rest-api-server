@@ -4,7 +4,7 @@
   "description": "Back-end of Amazon Clone",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./src/index.js"
+    "start": "node ./src/index.js"
   },
   "author": "Ritik Tanwar",
   "keywords": [
