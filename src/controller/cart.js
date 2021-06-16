@@ -17,7 +17,7 @@ exports.addToCart = (req, res) => {
       // res.status(200).json({message:cart});
       // if cart already exist update the quantity and price
       let promiseArray = [];
-      console.log("Cart1", cart);
+      // console.log("Cart1", cart);
       req.body.cartItems.forEach((cartItem) => {
         const product = cartItem.product;
         const isAdded = cart.cartItems.find((item) => item.product == product);
@@ -53,7 +53,7 @@ exports.addToCart = (req, res) => {
         user: req.user._id,
         cartItems: req.body.cartItems,
       });
-      console.log("Cart2", cart);
+      // console.log("Cart2", cart);
       cart.save((err, cart) => {
         if (err) return res.status(400).json({ err });
         if (cart) {
